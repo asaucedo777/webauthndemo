@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
@@ -165,7 +166,7 @@
       <artifactId>google-api-client</artifactId>
       <version>1.28.0</version>
       <exclusions>
-        <exclusion>  <!-- declare the exclusion here -->
+        <exclusion>          <!-- declare the exclusion here -->
           <groupId>com.google.guava</groupId>
           <artifactId>guava-jdk5</artifactId>
         </exclusion>
@@ -229,11 +230,13 @@
           <enableJarClasses>false</enableJarClasses>
           <!-- Comment in the below snippet to bind to all IPs instead of 
             just localhost -->
-          <!-- address>0.0.0.0</address> <port>8080</port -->
+          <address>0.0.0.0</address>
+          <port>2004</port>
           <!-- Comment in the below snippet to enable local debugging with 
             a remote debugger like those included with Eclipse or IntelliJ -->
-          <!-- jvmFlags> <jvmFlag>-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n</jvmFlag> 
-            </jvmFlags -->
+          <jvmFlags>
+            <jvmFlag>-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n</jvmFlag>
+          </jvmFlags>
         </configuration>
       </plugin>
     </plugins>

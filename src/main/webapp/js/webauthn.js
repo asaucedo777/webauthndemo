@@ -438,7 +438,8 @@ function getAssertion() {
   show('#active');
 
   let _parameters;
-  _fetch('/BeginGetAssertion').then(parameters => {
+  _fetch('/BeginGetAssertion')
+  .then(parameters => {
     const requestOptions = {};
     _parameters = parameters;
 
